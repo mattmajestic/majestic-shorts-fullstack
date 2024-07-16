@@ -32,11 +32,6 @@ body {
   }
 }
 
-/* Add any custom styles below */
-.prose {
-  @apply max-w-none;
-}
-
 .strobe-effect {
   animation: strobe 2s infinite alternate;
 }
