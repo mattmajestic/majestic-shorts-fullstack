@@ -1,22 +1,25 @@
-name: Publish Docker Image to Docker Hub
+name: Publish Docker image to Docker Hub
 
 on:
   workflow_dispatch:
-    
 
 jobs:
-  build:
+  push_to_registry:
+    name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
+      - name: Check out the repo
         uses: actions/checkout@v2
 
-      - name: Login to Docker Hub
-        run: |
-          echo "${{ secrets.DOCKERHUB_PASSWORD }}" | docker login -u mattmajestic --password-stdin
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v1 
+        with:
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
-      - name: Build and Push to Docker Hub
-        run: |
-          docker build -t mattmajestic/majestic-shorts-fullstack:latest .
-          docker push mattmajestic/majestic-shorts-fullstack:latest
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: ./backend
+          push: true
+          tags: mattmajestic/majestic-shorts-backend:latest
