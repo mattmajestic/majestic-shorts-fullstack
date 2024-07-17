@@ -2,6 +2,11 @@
 
 Documentation for the project including a breakdown of the entire stack and git strategies for effcient full-stack developement.  
 
+## Dev Links
+- Frontend: https://majestic-shorts.vercel.app/
+- Backend: https://majestic-shorts-backend.onrender.com/api 
+- Docs: https://mattmajestic.github.io/majestic-shorts-fullstack/#/
+
 ![Project Logo](./SaaS%20Full%20Stack%20Architecture.png)
 
 ## Full-Stack Architecture for the Repo
