@@ -1,0 +1,14 @@
+
+services:
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+  api:
+    build: ./backend
+    ports:
+      - "8000:80"

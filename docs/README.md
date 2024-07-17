@@ -6,11 +6,11 @@ Documentation for the project including a breakdown of the entire stack and git 
 
 ## Full-Stack Architecture for the Repo
 
-- [ ] Frontend: Next.js
-- [ ] Backend: Python
-- [ ] Authentication: Clerk
+- [ ] Frontend: NextJS
+- [ ] Backend: Python & Boto3
+- [ ] Authentication: AWS Cognito 
 - [ ] Payments: Stripe
-- [ ] Hosting: Vercel & Render
+- [ ] Hosting: EKS on AWS with AWS Docker Registry
 
 ## Git Strategies for the Repo
 

@@ -1,9 +1,7 @@
 requests
 python-dotenv
-moviepy
-gTTS
-google-auth-oauthlib
-google-auth
-google-api-python-client
+# moviepy
+# gTTS
 fastapi
 uvicorn
+python-multipart
